@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font: Inria Serif;
+    --title-fontsize: 35px;
+    --medium-fontsize: 20px;
+    --text-fontsize: 15px;
+
+    --primary-textcolor: ;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: var(--text-fontsize);
+}
+
+h1 {
+    font-size: var(--title-fontsize);
+    font-style: italic;
+}
+
+img {
+    width: auto;
+    height: 133px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 30px repeat(2, 100px) auto;
+
+    #title {
+        place-self: center;
+        grid-column: 2;
+        text-align: center;
+        grid-row: 2;
+
+        p {
+            margin-top: -10px;
+        }
+    }
+
+    #datePicker {
+        width: 456px;
+        height: 54px;
+        border-radius: 10px;
+        border: 1px solid black;
+
+        grid-column: 2;
+        grid-row: 3;
+        place-self: center;
+
+        p {
+            padding-left: 10px;
+        }
+    }
+
+    svg {
+        grid-row: 2;
+        grid-column: 3;
+        place-self: center;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 133px);
+    grid-template-rows: repeat(3, 175px);
+    justify-content: center;
+
+    #shelfItems1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        place-content: center;
+    }
+
+    #one {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        align-self: end;
+    }
+
+    #shelfItems2 {
+        grid-column: span 4;
+        grid-row: 2;
+        place-content: center;
+    }
+
+    #two {
+        grid-row: 2;
+        grid-column-start: 1;
+        align-self: end;
+    }
+
+    #shelfItems3 {
+        grid-column: span 4;
+        grid-row: 3;
+        place-content: center;
+    }
+
+    #three {
+        grid-row: 3;
+        grid-column-start: 1;
+        align-self: end;
+    }
+}

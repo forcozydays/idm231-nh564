@@ -66,45 +66,13 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: repeat(4, 133px);
-    grid-template-rows: repeat(3, 175px);
+    grid-template-rows: 175px 25px 175px 25px 175px 25px;
     justify-content: center;
 
-    #shelfItems1 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        place-content: center;
+    #shelfItems1, #shelfItems2, #shelfItems3 {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
     }
-
-    #one {
-        grid-row: 1;
-        grid-column-start: 1;
-        grid-column-end: span 4;
-        align-self: end;
-    }
-
-    #shelfItems2 {
-        grid-column: span 4;
-        grid-row: 2;
-        place-content: center;
-    }
-
-    #two {
-        grid-row: 2;
-        grid-column-start: 1;
-        align-self: end;
-    }
-
-    #shelfItems3 {
-        grid-column: span 4;
-        grid-row: 3;
-        place-content: center;
-    }
-
-    #three {
-        grid-row: 3;
-        grid-column-start: 1;
-        align-self: end;
-    }
+    
 }

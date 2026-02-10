@@ -26,3 +26,78 @@ function getZodiac(month, day) {
     } else return null;
 }
 
+const signs = [
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    },
+
+    {
+        name: 'capricorn',
+        sound: '',
+        image: ''
+    }
+]
+
+const help = document.getElementById("help")

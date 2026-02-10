@@ -27,77 +27,49 @@ function getZodiac(month, day) {
 }
 
 const signs = [
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'capricorn', sound: '', image: 'elephant', color: 'red' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Sagittarius', sound: '', image: 'frog', color: 'yellow' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Scorpio', sound: '', image: 'tiger', color: 'red' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Libra', sound: '', image: 'duck', color: 'blue' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Virgo', sound: '', image: 'sheep', color: 'pink' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Leo', sound: '', image: 'lion', color: 'red' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Cancer', sound: '', image: 'rabbit', color: 'yellow' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Gemini', sound: '', image: 'shiba', color: 'red' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Taurus', sound: '', image: 'cow', color: 'red' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Aries', sound: '', image: 'horse', color: 'blue' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    },
+    { name: 'Pisces', sound: '', image: 'panda', color: 'red' },
 
-    {
-        name: 'capricorn',
-        sound: '',
-        image: ''
-    }
+    { name: 'Aquarius',  sound: '', image: 'mouse', color: 'pink' },
 ]
 
-const help = document.getElementById("help")
+const gridInfo = document.getElementById('displaySonnyAngels');
+
+for (let i = 0; i < signs.length; i++) {
+  const displayBox = document.createElement('div');
+  displayBox.setAttribute('class', signs[i].color);
+  // console.log(displayBox.getAttribute('class')); //testing
+
+  const image = document.createElement('img');
+  const imageName = `assets/sonny-angel-half/${signs[i].image}.png`;
+  image.setAttribute('src', imageName);
+  // console.log(image); //testing
+
+  displayBox.appendChild(image);
+  gridInfo.appendChild(displayBox);
+}
+
+
+const help = document.getElementById('help');
+help.addEventListener('click', () => {
+  
+});

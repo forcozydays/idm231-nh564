@@ -8,11 +8,13 @@
     --medium-fontsize: 20px;
     --text-fontsize: 15px;
 
+    --secondary-textcolor: black;
     --primary-textcolor: #CF4538;
     --bg-color: #FAF6ED;
     --pink-box: #FEB5C0;
     --blue-box: #ABCBD8;
     --yellow-box: #F4EDC1;
+    --overlay: rgba(152,46,37,0.3);
 }
 
 body {
@@ -58,8 +60,27 @@ header {
         grid-row: 3;
         place-self: center;
 
-        p {
-            padding-left: 10px;
+        #form {
+            display: flex;
+            justify-content: space-between;
+
+            #dateInput {
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                padding: 15px;
+                font-family: var(--primary-font);
+                cursor: pointer;
+            }
+    
+            #submit {
+                background-color: transparent;
+                border: none;
+                padding-right: 20px;
+                color: var(--secondary-textcolor);
+                font-family: var(--primary-font);
+                cursor: pointer;
+            }
         }
     }
 
@@ -105,6 +126,9 @@ main {
         border-radius: 10px; 
         text-align: center;
         cursor: pointer;
+        :hover {
+            
+        }
         
         img {
             margin-top: 10px;
@@ -126,5 +150,44 @@ main {
     .yellow { 
         background-color: var(--yellow-box); 
     }
+
     
+    
+}
+
+.overlay {
+    background-color: var(--overlay);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    #helpBox {
+        width: 550px;
+        height: 400px;
+        background-color: var(--bg-color);
+        border-radius: 10px;
+
+        align-self: center;
+        padding: 80px 50px;
+
+        h1, p {
+            text-align: center;
+        }
+
+        p {
+            color: var(--secondary-textcolor);
+        }
+    }
+
+    .sonnyAngelDetails {
+        width: 756px;
+        height: 513px;
+        background-color: var(--bg-color);
+        border-radius: 10px;
+    }
 }

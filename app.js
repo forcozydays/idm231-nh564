@@ -59,22 +59,45 @@ function displayHelp() {
   closePopUp(overlay);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-
-  const bdate = document.querySelector('form').elements['birthday'].value.split('-');
-}
-
 function getBdate(date) {
-
-
   const splitDate = {
     year: date[0],
     month: date[1],
     day: date[2],
   }
+  console.log(splitDate.month);
+  console.log(splitDate.day);
 
-  return date;
+  const month = parseInt(splitDate.month, 10);
+  const day = parseInt(splitDate.day, 10);
+
+  console.log(month);
+  console.log(day);
+
+  const zodiac = getZodiac(month, day);
+  if (zodiac) {
+    const angel = signs.find((sign => sign.name.toLowerCase() === zodiac.toLowerCase()));
+
+    console.log(angel);
+
+    if (angel) {
+      showSonnyAngels(angel);
+    }
+  }
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+
+  const date = form.elements['birthday'].value;
+  if (!date) {
+    window.alert('please enter your birthdate!');
+    return;
+  }
+
+  const splitDate = date.split('-');
+  getBdate(splitDate);
 }
 
 function showSonnyAngels(signName) {
@@ -91,8 +114,17 @@ function showSonnyAngels(signName) {
   image.src = `assets/sonny-angel-full/${signName.image}.png`;
   image.height = '325px';
 
+  const matchedZodiac = document.createElement('p');
+  matchedZodiac.textContent = `Matching Zodiac: ${signName.name}`;
+
   const desc = document.createElement('p');
   desc.textContent = `${signName.desc}`;
+
+  const text = document.createElement('div');
+  text.className = 'textbox';
+
+  text.appendChild(matchedZodiac);
+  text.appendChild(desc);
 
   const close = document.createElement('button');
   close.textContent = 'close';
@@ -104,14 +136,11 @@ function showSonnyAngels(signName) {
 
   infoBox.appendChild(title);
   infoBox.appendChild(image);
-  infoBox.appendChild(desc);
+  infoBox.appendChild(text);
   infoBox.appendChild(close);
   overlay.appendChild(infoBox);
   document.body.appendChild(overlay);
 }
-
-// need to pass in a parameter when doing on click to check what is being clicked (see using params w event listeners page)
-
 
 const signs = [
     { name: 'capricorn', 
@@ -219,3 +248,6 @@ for (let i = 0; i < signs.length; i++) {
 
 const help = document.getElementById('help')
 help.addEventListener('click', displayHelp);
+
+const form = document.querySelector('form');
+form.addEventListener('submit', handleSubmit);

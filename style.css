@@ -90,6 +90,7 @@ header {
         place-self: center;
 
         cursor: pointer;
+        
     }
 }
 
@@ -240,6 +241,13 @@ main {
 
             color: var(--primary-textcolor);
             font-family: var(--primary-font);
+
+            cursor: pointer;
+        }
+
+        .close:hover {
+            background-color: var(--primary-textcolor);
+            color: var(--bg-color);
         }
     }
 }

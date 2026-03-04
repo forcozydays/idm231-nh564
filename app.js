@@ -90,7 +90,7 @@ function displayHelp() {
     overlay.className = 'overlay';
   
     const helpBox = document.createElement('div');
-    helpBox.id = 'helpBox'
+    helpBox.id = 'helpingBox'
   
     const title = document.createElement('h1');
     title.textContent = 'How to use';

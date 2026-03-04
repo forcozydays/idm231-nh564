@@ -39,7 +39,7 @@ header {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 30px repeat(2, 100px) auto;
 
-    #title {
+    #heading {
         place-self: center;
         grid-column: 2;
         text-align: center;
@@ -103,7 +103,7 @@ main {
     column-gap: 18px;
     row-gap: 28px;
 
-    #shelfItems1, #shelfItems2, #shelfItems3 {
+    #shelfItem1, #shelfItems2, #shelfItems3 {
         display: flex;
         justify-content: space-around;
         grid-column-start: 1;
@@ -111,7 +111,7 @@ main {
         align-self: center;
     }
 
-    #shelfItems1 {
+    #shelfItem1 {
         grid-row-start: 1;
     }
 
@@ -170,7 +170,7 @@ main {
     display: flex;
     justify-content: center;
 
-    #helpBox {
+    #helpingBox {
         width: 550px;
         height: 400px;
         background-color: var(--bg-color);
